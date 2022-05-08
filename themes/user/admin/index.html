@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin-style.css">
+    <script src="https://use.fontawesome.com/338ef58d21.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+
+</head>
+
+
+
+<body>
+
+  <!-- Start Navbar ffff -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark nav_dark myMenu">
+    <div class="container">
+    
+      <a href="index3.html" class="navbar-brand">
+        <img src="../Images/logo-main.png" alt="Parking_Logo" class="brand-image img-circle elevation-3"> 
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Park<br> or<br> Dock</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">List a Space
+              <br>or<br>
+              Boat Dock</a>
+          </li>   
+           <!-- Dropdown -->
+          <li class="nav-item dropdown UserDropDown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+              <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="javascript:void(0);" class="dropdown-item" data-toggle="modal" data-target="#myModal">
+                <i class="mr-2"></i> Log in
+              </a>
+             
+              <a href="#" class="dropdown-item">
+                <i class="mr-2"></i> Sign Up
+            
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="mr-2"></i> Find A Space
+        
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                  <i class="mr-2"></i> Main Page
+                 
+                </a>
+
+             
+                <a href="#" class="dropdown-item">
+                    <i class="mr-2"></i> Help
+                   
+                  </a>
+            </div>
+          </li> 
+        </ul>
+      </div>  
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+    <!-- Modal -->
+    <div class="modal fade login_modal" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        
+        <!-- Modal content-->
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="heading_login">
+                <h2>Welcome To <span style="color: #0060AD;">Parking</span> <span style="color: #9D121F;">Genie</span></h2>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-sm-12">
+            
+              <div class="login_form">
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" placeholder="name@domain.com">
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control" placeholder="atleast 8 characters">
+                </div>
+                <input type="submit" value="Login" class="btn btn_login">
+                <ul>
+                    <li>
+                        <label class="container_check">Remember Me
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </li>
+                    <li><a href="#">Forgot Password</a></li>
+                </ul>
+                <button class="btn btn_social_login" style="background-color: #EA4335;">Gmail</button>
+                <button class="btn btn_social_login" style="background-color: #3B5998;">Facebook</button>
+                <p>Don't have an account? <a href="#">Signup</a></p>
+            </div>
+  
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+
+
+<!-- Start Body -->
+<!-- Demo header-->
+<section class="py-5 header">
+  <div class="container py-4">
+
+      <div class="tabs_area">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <!-- Tabs nav -->
+                <div class="nav flex-column nav-pills nav-pills-custom custom-tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <button class="openBtMob" type="button">
+                    <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"/></svg>
+                  </button>
+                  <button class="btn_mobileMenu closeBtMob" type="button">
+                    <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"/></svg>
+                  </button>
+                  <h3>Parking Details</h3>
+                    <a class="nav-link active" id="v-pills-parking-tab" data-toggle="pill" href="#v-pills-parking" role="tab" aria-controls="v-pills-parking" aria-selected="true">
+                        <span class="span-text">Location</span></a>
+
+                    <a class="nav-link" id="v-pills-Desc-tab" data-toggle="pill" href="#v-pills-Desc" role="tab" aria-controls="v-pills-Desc" aria-selected="false">
+                        <span class="span-text">Title & Description</span></a>
+
+                    <a class="nav-link" id="v-pills-park_cat-tab" data-toggle="pill" href="#v-pills-park_cat" role="tab" aria-controls="v-pills-park_cat" aria-selected="false">
+                        <span class="span-text">Parking category</span></a>
+
+                    <a class="nav-link" id="v-pills-instructions-tab" data-toggle="pill" href="#v-pills-instructions" role="tab" aria-controls="v-pills-instructions" aria-selected="false">
+                        <span class="span-text">Instruction</span></a>
+
+
+
+                        <a class="nav-link" id="v-pills-reservation-tab" data-toggle="pill" href="#v-pills-reservation" role="tab" aria-controls="v-pills-reservation" aria-selected="false">
+                          <span class="span-text">Reservation</span></a>
+                          <a class="nav-link" id="v-pills-photo-tab" data-toggle="pill" href="#v-pills-photo" role="tab" aria-controls="v-pills-photo" aria-selected="false">
+                            <span class="span-text">Photos & Details</span></a>
+                            <a class="nav-link" id="v-pills-pricing-tab" data-toggle="pill" href="#v-pills-pricing" role="tab" aria-controls="v-pills-pricing" aria-selected="false">
+                              <span class="span-text">Pricing</span></a>
+                              <a class="nav-link" id="v-pills-availability-tab" data-toggle="pill" href="#v-pills-availability" role="tab" aria-controls="v-pills-availability" aria-selected="false">
+                                <span class="span-text">Availability</span></a> 
+                                <a class="nav-link" id="v-pills-calendar-tab" data-toggle="pill" href="#v-pills-calendar" role="tab" aria-controls="v-pills-calendar" aria-selected="false">
+                                  <span class="span-text">Calender</span></a>
+                    </div>
+            </div>
+
+            <div class="col-md-9">
+                <!-- Tabs content -->
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade bg-white show active" id="v-pills-parking" role="tabpanel" aria-labelledby="v-pills-parking-tab">
+                        <h2 class="mb-4">Hey Muhammad, Let's Get Started Listing<br> Your Space</h2>
+                        <p class="text-muted mb-2">Where is your space located?</p>
+                        <button type="button" class="btn btn-primary btn-default" id="park_btn">Use my Current Location</button>
+                    
+                           <p class="orr">or</p>
+                           <input type="text" id="park_input" placeholder="Enter Address">
+                           <br>
+                           <button type="button" class="btn btn-primary btn-default cont_btn" id="park_btn">CONTINUE</button>
+                 <div class="loc_map">
+                   <!--Google map-->
+<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+  <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+    style="border:0" allowfullscreen></iframe>
+</div>
+
+<!--Google Maps-->
+                 </div>
+                      </div>
+                    
+                    <div class="tab-pane fade bg-white" id="v-pills-Desc" role="tabpanel" aria-labelledby="v-pills-Desc-tab">
+                        <h2 class="mb-4">Add A Title & Description</h2>
+                      <div class="dec-title">
+                        <label class="text-muted mb-2">Title</label>
+                        <br>
+                        <input type="text" id="park_input" placeholder="Enter Address">
+                      </div>
+                      <div class="desc-textarea"> 
+                        <label class="text-muted mb-2">Write a Description ( Optional)
+                        </label><br>
+                        <textarea rows="6" id="park_textarea" class="park_textarea form-control" placeholder="Enter Address"></textarea>
+                      </div>
+                    </div>
+                    
+                    <div class="tab-pane fade bg-white" id="v-pills-park_cat" role="tabpanel" aria-labelledby="v-pills-park_cat-tab">
+                        <h2 class="mb-4">What Kind Of Space Are You Listing?</h2>
+                        <div class="park_cat_options row">
+
+                        <div class="col-md-3">
+                          <input type="radio" checked name="emotion" id="park_img1" class="input-hidden" />
+                          <label for="park_img1">
+                            <img 
+                              src="../Images/park-img1.png" 
+                              alt="parking_img" />
+                          </label for>
+                        </div>
+                         <div class="col-md-3">
+                          <input type="radio" name="emotion" id="park_img2" class="input-hidden" />
+                          <label for="park_img2">
+                            <img 
+                              src="../Images/park-img1.png" 
+                              alt="parking_img" />
+                          </label>
+                        </div> 
+                        <div class="col-md-3">
+                          <input type="radio" name="emotion" id="park_img3" class="input-hidden" />
+                          <label for="park_img3">
+                            <img 
+                              src="../Images/park-img1.png" 
+                              alt="parking_img" />
+                          </label>
+                        </div> 
+                        <div class="col-md-3">
+                          <input type="radio" name="emotion" id="park_img3" class="input-hidden" />
+                          <label for="park_img3">
+                            <img 
+                              src="../Images/park-img1.png" 
+                              alt="parking_img" />
+                          </label>
+                        </div> 
+
+                        </div>
+                     
+                        <h2 class="mb-4">Select Your Vehicle Or Vessel?</h2>
+                        <div class="park_cat_options row">
+
+                        <div class="col-md-3">
+                          <input type="radio" name="emotion" id="park_img4" class="input-hidden" />
+                          <label for="park_img4">
+                            <img 
+                              src="../Images/park-img1.png" 
+                              alt="parking_img" />
+                          </label for>
+                        </div>
+                         <div class="col-md-3">
+                          <input type="radio" name="emotion" id="park_img5" class="input-hidden" />
+                          <label for="park_img5">
+                            <img 
+                              src="../Images/park-img1.png" 
+                              alt="parking_img" />
+                          </label>
+                        </div> 
+                        <div class="col-md-3">
+                          <input type="radio" name="emotion" id="park_img6" class="input-hidden" />
+                          <label for="park_img6">
+                            <img 
+                              src="../Images/park-img1.png" 
+                              alt="parking_img" />
+                          </label>
+                        </div> 
+                        <div class="col-md-3">
+                          <input type="radio" name="emotion" id="park_img6" class="input-hidden" />
+                          <label for="park_img6">
+                            <img 
+                              src="../Images/park-img1.png" 
+                              alt="parking_img" />
+                          </label>
+                        </div> 
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    
+                    <div class="tab-pane fade bg-white" id="v-pills-instructions" role="tabpanel" aria-labelledby="v-pills-instructions">
+                        <h2 class="mb-4">Please Read Carefully Before Going<br>
+                          Forward?</h2>
+                          <div class="row">
+                            <div class="col-md-5"><h5>Step 01</h5>
+                            <h3>Lorem Ipsum</h3>
+                            <p class="text-muted mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                              </div>
+                            <div class="col-md-5"><h5>Step 02</h5>
+                              <h3>Lorem Ipsum</h3>
+                              <p class="text-muted mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                          </div>
+                       
+                          <div class="row">
+                            <div class="col-md-5"><h5>Step 03</h5>
+                              <h3>Lorem Ipsum</h3>
+                              <p class="text-muted mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                            <div class="col-md-5"><h5>Step 03</h5>
+                              <h3>Lorem Ipsum</h3>
+                              <p class="text-muted mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                          </div>
+                                         </div>
+                    <div class="tab-pane fade bg-white" id="v-pills-reservation" role="tabpanel" aria-labelledby="v-pills-reservation">
+                      <h2 class="mb-4">Will The Host Greet User At The Location?</h2>
+                      <div class="form-check" id="greeting_form">
+                       
+                          <label class="radio">
+                            <input type="radio" name="optradio">I will not be home
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="optradio">I will be home
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="optradio">Other
+                          </label>
+                       
+                      </div>
+
+                     <h4>Are there surveillance cameras present?</h4>
+                      <div class="form-check" id="camera_form">
+                        
+                        <label class="radio">
+                          <input type="radio" name="optradio">I have security cameras 1
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="optradio">I don't have security cameras
+                        </label>
+                       
+
+                      
+                      </div>
+                      </div>
+                  <div class="tab-pane fade bg-white" id="v-pills-photo" role="tabpanel" aria-labelledby="v-pills-photo">
+                    <h2 class="mb-4">Add Photos To Your Listing!</h2>
+                    <p class="text-muted mb-2">Take photos using a phone or camera. Upload at least one photo to publish your listing and<br>
+                      drag to reorder however you like. You can always add or edit your photos later.
+                    <div class="photos_listing">
+                      <div class="photo_input">
+                      <input type="file" id="image1" name="image[]" multiple />
+                    </div><br/>
+                      <div class="row" id="frames1"></div>
+                    </div> 
+                    
+                    
+                    </div>
+                <div class="tab-pane fade bg-white" id="v-pills-pricing" role="tabpanel" aria-labelledby="v-pills-pricing">
+                  <h2 class="mb-4">Set Your Price</h2>
+                  <p class="text-muted mb-2">Set a Base Price, which is the minimum earned for every booking.</p>
+                  <p class="text-muted mb-2"> Tip: Lower base prices tend to rank higher in seach results.</p>
+                
+                  <div class="qtyy mt-5 col-md-10">
+                    <span class="minus bg-dark">-</span>
+                    <input type="number" class="count" name="qty" value="1">
+                    <span class="plus bg-dark">+</span>
+                </div>
+                
+                </div>
+              <div class="tab-pane fade bg-white" id="v-pills-photo" role="tabpanel" aria-labelledby="v-pills-photo">
+                <h4 class="mb-4">Photo and details</h4>
+                <p class="text-muted mb-2">Photo ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+
+            <div class="tab-pane fade bg-white" id="v-pills-availability" role="tabpanel" aria-labelledby="v-pills-availability">
+              <h2 class="mb-4">When Is Your Space Available?</h2>
+              <p class="text-muted mb-2">Tell us which month your space is open in between what time youe space is available.</p>
+          
+                    <div class="start_dates">
+                      <div class="col-md-5">
+                        <h5>Season start</h5>
+                        <div class="dropdown_park">
+                          <select id='gMonth2'>
+                        
+                          <option value='1'>Janaury</option>
+                          <option value='2'>February</option>
+                          <option value='3'>March</option>
+                          <option value='4'>April</option>
+                          <option value='5'>May</option>
+                          <option value='6'>June</option>
+                          <option value='7'>July</option>
+                          <option value='8'>August</option>
+                          <option value='9'>September</option>
+                          <option value='10'>October</option>
+                          <option value='11'>November</option>
+                          <option value='12'>December</option>
+                          </select> 
+                          </div>
+
+
+                         </div>
+                                              <div class="col-md-2">
+                                                <h4>TO</h4>
+                                              </div>
+                                              <div class="col-md-5 seasonend">
+                                                <h5>Season End</h5>
+                                                <div class="dropdown_park" >
+                                                  <select id='gMonth1'>
+                                            
+                                              <option value='1'>Janaury</option>
+                                              <option value='2'>February</option>
+                                              <option value='3'>March</option>
+                                              <option value='4'>April</option>
+                                              <option value='5'>May</option>
+                                              <option value='6'>June</option>
+                                              <option value='7'>July</option>
+                                              <option value='8'>August</option>
+                                              <option value='9'>September</option>
+                                              <option value='10'>October</option>
+                                              <option value='11'>November</option>
+                                              <option value='12'>December</option>
+                                              </select> 
+                                              </div> 
+
+                                              </div>
+
+                    </div>
+                    <hr>
+                    <div class="end_dates">
+                      <div class="col-md-5">
+<h5>Earliest Reservation</h5>
+
+<div class="dropdown_park">
+  <select id='gtime2'>
+  <option value='1'>9.00 a.m</option>
+  <option value='2'>10.00 a.m</option>
+  <option value='3'>11.00 a.m</option>
+  <option value='4'>12.00 a.m</option>
+  <option value='5'>13.00 a.m </option>
+  
+  </select> 
+  </div>
+
+
+                      </div>
+                      <div class="col-md-2">
+                        <h4>TO</h4>
+                      </div>
+                      <div class="col-md-5 seasonend">
+                        <h5>Latest Reservation</h5>
+
+                        <div class="dropdown_park">
+                          <select id='gtime1'>
+                          <option value='1'>9.00 a.m</option>
+                          <option value='2'>10.00 a.m</option>
+                          <option value='3'>11.00 a.m</option>
+                          <option value='4'>12.00 a.m</option>
+                          <option value='5'>13.00 a.m </option>
+                          
+                          </select> 
+                          </div>
+                      </div>
+
+                    </div>
+          
+            </div>
+
+          <div class="tab-pane fade bg-white" id="v-pills-calendar" role="tabpanel" aria-labelledby="v-pills-calendar">
+            <h2 class="mb-4">Manage Your Calendar</h2>
+            <p class="text-muted mb-2">Editing your calendar is easy—just select a date to block or unblock it. You can always make <br>
+              changes after you publish.</p>
+           
+           <div class="date1">
+                <script>
+                $('.date1').datepicker({
+            inline: true,
+              sideBySide: true,
+              keepOpen: true,
+              format: 'YYYY-MM-DD hh:mm A',
+              debug:true,
+              multidate: true
+          });
+                </script>
+          
+              
+        </div>
+
+
+                </div>
+           
+                 <div id="nextbtn">
+                <button type="button" class="btn btn-primary btn-default cont_btn NextBtn" id="park_btn">NEXT</button>
+              </div>
+              </div>
+            
+        </div>
+
+      </div>
+  </div>
+</section>
+
+<!-- End Body -->
+
+
+
+<!-- Start Footer -->
+<footer class="page-footer font-small unique-color-dark" id="main-foot">
+
+  <div class="container">
+
+<div class="container text-center text-md-left mt-5">
+
+  <div class="row mt-3">
+
+    <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4 foot-logo">
+      <p><img src="Images/logo-main.png"></p>
+
+    </div>
+<div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+
+      <h6 class="text-uppercase font-weight-bold">CONTACT US</h6>
+     
+      <p>
+        <a href="#!">BOOKING & PAYMENT</a>
+      </p>
+      <p>
+        <a href="#!">PRIVACY POLICY</a>
+      </p>
+      <p>
+        <a href="#!">TERMS & CONDITIONS</a>
+      </p>
+      <p>
+        <a href="#!">FAQs</a>
+      </p>
+
+    </div>
+
+<div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+<h6 class="text-uppercase font-weight-bold">PAYMENT METHOD</h6>
+      
+      <p><img src="Images/pay.png"></p>
+      
+    </div>
+
+
+
+    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+
+      <h6 class="text-uppercase font-weight-bold">REACH US</h6>
+     
+      <p>
+        <a href="mailto:info@Parkinggenie@ymail.com">info@Parkinggenie@ymail.com</a></p>
+      <!-- <p>
+        <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+      <p>
+        <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+      <p>
+        <i class="fas fa-print mr-3"></i> + 01 234 567 89</p> -->
+
+    </div>
+    <div class="btn_scroll">
+      <button id="scroll_top"><img src="Images/arrow_up.png"></button>
+    </div>
+
+  </div>
+
+
+</div>
+
+</div>
+</footer>
+<div class="footer-copyright text-center py-3">
+<div class="col-md-6">
+  2021 Parking Genie.  All Rights Reserved.
+</div>
+<div class="col-md-6">
+  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+  <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+</div>
+
+</div>
+<!-- End Footer -->
+</div>
+</div>
+ 
+</body>
+<script>
+
+$(document).ready(function(){
+ $( function() {
+$( "#datepicker" ).datepicker();
+   });
+  });
+
+</script>
+<script>
+  $(document).ready(function(){
+    $('#image1').change(function(){
+        $("#frames1").html('');
+        for (var i = 0; i < $(this)[0].files.length; i++) {
+            $("#frames1").append('<div class="col-md-4"><img src="'+window.URL.createObjectURL(this.files[i])+'" width="auto" height="200px"/></div>');
+        }
+    });
+});
+  </script>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+   <script src="https://use.fontawesome.com/338ef58d21.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./js/script.js"></script>
+<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+<link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+<!-- <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+        <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+        <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+        <!-- <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script> -->
+</head>
+
+
+<body>
+<!-- Start Navbar -->
+  <!-- Start Navbar ffff -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark nav_dark myMenu">
+    <div class="container">
+    
+      <a href="index3.html" class="navbar-brand">
+        <img src="Images/logo-main.png" alt="Parking_Logo" class="brand-image img-circle elevation-3"> 
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Park<br> or<br> Dock</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">List a Space
+              <br>or<br>
+              Boat Dock</a>
+          </li>   
+           <!-- Dropdown -->
+          <li class="nav-item dropdown UserDropDown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+              <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="javascript:void(0);" class="dropdown-item" data-toggle="modal" data-target="#myModal">
+                <i class="mr-2"></i> Log in
+              </a>
+             
+              <a href="#" class="dropdown-item">
+                <i class="mr-2"></i> Sign Up
+            
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="mr-2"></i> Find A Space
+        
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                  <i class="mr-2"></i> Main Page
+                 
+                </a>
+
+             
+                <a href="#" class="dropdown-item">
+                    <i class="mr-2"></i> Help
+                   
+                  </a>
+            </div>
+          </li> 
+        </ul>
+      </div>  
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+
+      <!-- Modal -->
+      <div class="modal fade login_modal" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          
+          <!-- Modal content-->
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="heading_login">
+                  <h2>Welcome To <span style="color: #0060AD;">Parking</span> <span style="color: #9D121F;">Genie</span></h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+              
+                <div class="login_form">
+                  <div class="form-group">
+                      <label for="">Email</label>
+                      <input type="text" class="form-control" placeholder="name@domain.com">
+                  </div>
+                  <div class="form-group">
+                      <label for="">Password</label>
+                      <input type="password" class="form-control" placeholder="atleast 8 characters">
+                  </div>
+                  <input type="submit" value="Login" class="btn btn_login">
+                  <ul>
+                      <li>
+                          <label class="container_check">Remember Me
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                          </label>
+                      </li>
+                      <li><a href="#">Forgot Password</a></li>
+                  </ul>
+                  <button class="btn btn_social_login" style="background-color: #EA4335;">Gmail</button>
+                  <button class="btn btn_social_login" style="background-color: #3B5998;">Facebook</button>
+                  <p>Don't have an account? <a href="#">Signup</a></p>
+              </div>
+
+              </div>
+            </div>
+           
+          </div>
+          
+        </div>
+      </div>
+<!-- End Navbar -->
+
+
+
+
+
+  <div class="modal fade booking_mapp" id="myModal_new" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        </div>
+        <div class="modal-body">
+      
+          <div class="row">
+            <div class="col-md-12 modal_body_map">
+              <div class="location-map">
+                <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+                  <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                    style="border:0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <section id="book_form">
+                <div class="container">
+                    <div class="row book_row">
+                 <div class="book_text">
+                <h5>Book your parking in advance to save time and money.</h5>
+               <button type="button" class="btn btn-primary btn-default">New</button>
+                </div>
+            </div>
+                <div id="book_dropdown">
+               <div class="row drop_down-row">
+<div class="col-md-4 loc_input">
+  
+    <img src="Images/my-location.png">
+    <label>Location</label>
+    <input class="form-control" data-toggle="modal" data-target="#myModal_new"  type="text" placeholder="WHERE DO YOU WANT TO PARK?" aria-label="Search" >
+    
+</div>
+<div class="col-md-2 arivall">
+  <label>Arrival</label>
+    <input type='text ' class="form-control" id="input_dpick" width="234" placeholder="Week, DD MM, 00:00" />
+
+
+</div>
+    <script>
+        $('#input_dpick').datetimepicker({
+            uiLibrary: 'bootstrap4',
+            modal: true,
+            footer: true
+        });
+    </script>
+
+<div class="col-md-2 depart">
+  <label>Departure</label>
+    <input type='text' class="form-control" id='input_dpick2' placeholder="Week, DD MM, 00:00" />
+
+
+</div>
+ <script>
+        $('#input_dpick2').datetimepicker({
+            uiLibrary: 'bootstrap4',
+            modal: true,
+            footer: true
+        });
+    </script>
+<div class="col filter-col">
+  <button type="button" class="btn btn-outline-primary"><i class="fa fa-filter" aria-hidden="true"></i></button>
+    
+</div>
+<div class="col search_btn"><button type="button" class="btn btn-outline-primary">search</button>
+</div>
+
+               </div>
+               <div class="total_parking">
+                 <div class="row"><h3>256 Parking</h3>
+    
+                </div>
+            
+                 </div>
+                </div>
+               
+            </div>
+   </section>
+
+
+
+
+
+
+
+
+
+
+
+   
+<div class="booking_main">
+  <div class="container">
+    <div class="row">
+<div class="col-md-6 imgg">
+<div class="booking_img">
+  <img src="Images/booking_img.png">
+</div>
+</div>
+<div class="col-md-6">
+<div class="booking_text">
+<div class="booking_title">
+  <h2>The Two Side Parking (2 Hour Min)</h2>
+</div>
+<div class="booking_cat">
+  <h5>Los Angeles, California, 90027</h5>
+</div>
+<div class="booking_miles">
+  <h6>4.73 Miles</h6>
+</div>
+<div class="booking_desc">
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with</p>
+</div>
+<div class="booking_inst">
+<img src="Images/book.png">
+<span>Booking Instantly</span>
+</div>
+ <div class="booking_price">
+   <h2>$75</h2> <span>per hour</span>
+ </div>
+
+ <div class="booking_rating">
+  <span class="fa fa-star checked-starr"></span>
+  <span class="fa fa-star checked-starr"></span>
+  <span class="fa fa-star checked-starr"></span>
+  <span class="fa fa-star checked-starr"></span>
+  <span class="fa fa-star unchecked-starr"></span>
+ </div>
+
+<div class="booking_btn">
+  <button type="button" class="btn btn-primary btn-default">More Details</button>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+</div>
+
+<div class="book_pagination">
+  <div class="container">
+    <div class="row">
+      <nav aria-label="...">
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" id="prev_page" tabindex="-1"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item ">
+            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" id="next_page" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+
+  <footer class="page-footer font-small unique-color-dark" id="main-foot">
+
+    <div class="container">
+
+  <div class="container text-center text-md-left mt-5">
+
+    <div class="row mt-3">
+
+      <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4 foot-logo">
+        <p><img src="Images/logo-main.png"></p>
+
+      </div>
+  <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <h6 class="text-uppercase font-weight-bold">CONTACT US</h6>
+       
+        <p>
+          <a href="#!">BOOKING & PAYMENT</a>
+        </p>
+        <p>
+          <a href="#!">PRIVACY POLICY</a>
+        </p>
+        <p>
+          <a href="#!">TERMS & CONDITIONS</a>
+        </p>
+        <p>
+          <a href="#!">FAQs</a>
+        </p>
+
+      </div>
+
+ <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+ <h6 class="text-uppercase font-weight-bold">PAYMENT METHOD</h6>
+        
+        <p><img src="Images/pay.png"></p>
+        
+      </div>
+
+
+
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+ 
+        <h6 class="text-uppercase font-weight-bold">REACH US</h6>
+       
+        <p>
+          <a href="mailto:info@Parkinggenie@ymail.com">info@Parkinggenie@ymail.com</a></p>
+        <!-- <p>
+          <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+        <p>
+          <i class="fas fa-print mr-3"></i> + 01 234 567 89</p> -->
+
+      </div>
+      <div class="btn_scroll">
+        <button id="scroll_top"><img src="Images/arrow_up.png"></button>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+</footer>
+<div class="footer-copyright text-center py-3">
+  <div class="col-md-6">
+    2021 Parking Genie.  All Rights Reserved.
+  </div>
+  <div class="col-md-6">
+    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  </div>
+  
+</div>
+<!-- End Footer -->
+</div>
+
+
+ </div>
+
+ <script src="//maps.googleapis.com/maps/api/js"></script>
+</body>
+</html>

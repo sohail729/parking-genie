@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+   <script src="https://use.fontawesome.com/338ef58d21.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./js/script.js"></script>
+</head>
+
+
+<body>
+    <!-- Start Navbar ffff -->
+     <!-- Start Navbar ffff -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark myMenu">
+    <div class="container">
+    
+      <a href="index3.html" class="navbar-brand">
+        <img src="Images/logo-main.png" alt="Parking_Logo" class="brand-image img-circle elevation-3"> 
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Park<br> or<br> Dock</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">List a Space
+              <br>or<br>
+              Boat Dock</a>
+          </li>   
+           <!-- Dropdown -->
+          <li class="nav-item dropdown UserDropDown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+              <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="javascript:void(0);" class="dropdown-item" data-toggle="modal" data-target="#myModal">
+                <i class="mr-2"></i> Log in
+              </a>
+             
+              <a href="#" class="dropdown-item">
+                <i class="mr-2"></i> Sign Up
+            
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="mr-2"></i> Find A Space
+        
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                  <i class="mr-2"></i> Main Page
+                 
+                </a>
+
+             
+                <a href="#" class="dropdown-item">
+                    <i class="mr-2"></i> Help
+                   
+                  </a>
+            </div>
+          </li> 
+        </ul>
+      </div>  
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+
+      <!-- Modal -->
+      <div class="modal fade login_modal" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          
+          <!-- Modal content-->
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="heading_login">
+                  <h2>Welcome To <span style="color: #0060AD;">Parking</span> <span style="color: #9D121F;">Genie</span></h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+              
+                <div class="login_form">
+                  <div class="form-group">
+                      <label for="">Email</label>
+                      <input type="text" class="form-control" placeholder="name@domain.com">
+                  </div>
+                  <div class="form-group">
+                      <label for="">Password</label>
+                      <input type="password" class="form-control" placeholder="atleast 8 characters">
+                  </div>
+                  <input type="submit" value="Login" class="btn btn_login">
+                  <ul>
+                      <li>
+                          <label class="container_check">Remember Me
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                          </label>
+                      </li>
+                      <li><a href="#">Forgot Password</a></li>
+                  </ul>
+                  <button class="btn btn_social_login" style="background-color: #EA4335;">Gmail</button>
+                  <button class="btn btn_social_login" style="background-color: #3B5998;">Facebook</button>
+                  <p>Don't have an account? <a href="#">Signup</a></p>
+              </div>
+
+              </div>
+            </div>
+           
+          </div>
+          
+        </div>
+      </div>
+<!-- End Navbar -->
+
+      <div class="new-home-banner">
+         
+
+          <section id="homemain" class="banner newhome" style="background-image: url('Images/head-02.png')">
+                      <div class="container">
+                      <h2>Start hosting on<br> <b>Parking Genie</b> </h2>
+                     <button type="button" class="btn btn-primary btn-default">Get Started</button>
+                      </div>
+         </section>
+      </div>
+   
+
+ 
+
+ <section class="newhome5" id="inside_p">
+  <div class="container">
+              
+  <div class="row">
+  <div class="col-md-4 first-md4">
+    <h2 class="underlinee"> Genie <span class="new-clr"><br>Host</span></h2>
+    <span class="normal-span">Free</span>
+  <p>This account level provides residential hosts the option of listing boat docks or two (2) or less parking spaces, including a garage.</p>
+
+  
+  </div>
+  
+  <div class="col-md-4">
+    <h2 class="underlinee">Super Genie <span class="new-clr"><br>Host</span></h2>
+    <span class="normal-span">3.99 monthly or 29.99 annually </span>
+  <p>This is our featured residential subscription account level that allows hosts the ability to list boat docks or three (3) to four (4) parking spaces, including a garage.</p>
+
+  </div>
+
+  <div class="col-md-4">
+    <h2 class="underlinee">Commercial<br>
+        Genie<span class="new-clr">Host</span></h2>
+        <span  class="normal-span">69.99 annually</span>
+    <p>This is our commercial subscription account level allows hosts the ability to have bulk listings. As commercial Genie hosts, you have the option of listing boat docks, and an unlimited amount of parking spaces to guests. </p>
+    
+  </div>
+  </div>
+  
+  </div>
+  
+  </section>
+  <section class="newhome6" id="inside_p2">
+    <div class="container">
+      <div class="col-md-6" style=" text-align: center;">
+  <h2 class="underlinee" id="redclrh2"><span class="h2-light">Ideal</span> <span class="new-red-clr"> Genie</span> Hosts</h2></div>
+    <div class="row">
+
+      <div class="col-md-6 ">
+  
+       <div class="guest-f-row">
+        <div class="guests-text">
+          <div class="col-md-6 ">
+            <div class="card">
+              <div class="card-body">
+                <div class="guest-img">
+                  <img src="Images/gi1.png">
+                <h5 class="card-title">Live Near A Sports Venue?</h5>
+              </div>
+
+                <p class="card-text">For years savvy home owners residing near stadiums and arenas have taken advantage of earning extra income through seasonal sporting events by standing on busy corners soliciting parking. While this strategy may produce income, it does require lots of time and solicitation. Now that the Genie is out of the bottle, anyone can simply list their space on the Parking Genie platform and effortlessly collect income. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="guest-img">
+                  <img src="Images/gi2.png">
+                <h5 class="card-title">Can Home Owner Associations<br>
+                  Benefit?</h5>
+                </div>
+                <p class="card-text">Parking Genie could be a great opportunity for HOA’s to offset budgeted or unexpected costs around communities, simply by enrolling and renting allocated guest parking space.  </p>
+               
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="guest-img">
+                  <img src="Images/gi3.png">
+                <h5 class="card-title">What If I’m A Snow Bird?</h5>
+                </div>
+                <p class="card-text">If you are a snow bird living in an area part time, you may have the fortune of renting your unused parking space to interested guests. Turn that vacant parking space into an income producing business by becoming a Genie Host or VIP Genie Host.</p>
+               
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+  
+      </div>
+    <div class="col-md-6">
+
+    
+     <div class="guests-text">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="guest-img">
+              <img src="Images/gi4.png">
+            <h5 class="card-title">How About Colleges & Universities.</h5>
+            </div>
+            <p class="card-text">College towns are also ideal areas to list available space on the Parking Genie platform. Tailgating at an affordable price as well as easily accessible on and off campus parking is possible with Parking Genie.  </p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="guest-img">
+              <img src="Images/gi5.png">
+            <h5 class="card-title">What About Property <br>
+              Management Companies? </h5>
+            </div>
+            <p class="card-text">There is a huge market for discounted overnight parking space throughout the country. Commercial contractors are regularly searching for space to park some or all of their vehicle fleet. Become a VIP Genie Host and capitalize on the need for overnight parking space. </p>
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="guest-img">
+              <img src="Images/gi6.png">
+            <h5 class="card-title">Live Near Beaches, Lakes, Mountains <br>
+              Or Amusement Parks?</h5>
+            </div>
+            <p class="card-text">Cash in by living near places people visit seasonally or year-round. Beach goers, sightseers and thrill seekers of all kinds are always looking for places to park. Allow their saving and convenience desires to become your source of income.</p>
+           
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    
+ 
+    </div>
+    
+    </div>
+    
+    </section>
+ 
+
+
+ <section class="bookingss" style="background-image: url('Images/medium_image.png'); background-size: cover; background-repeat: no-repeat;" >
+<div class="container">
+  
+    <h2 class="underlinee">Ideas To Entice<span class="new-clr"> Bookings</span></h2>
+    <div class="row">
+    <div class="col-md-3"><div class="card" >
+      <img class="card-img-top" src="Images/book-3.png">
+      <div class="card-body">
+       <p class="card-text">Make sure your listing<br>
+        has a clear image of<br>
+        the space.</p>
+    
+      </div>
+    </div></div> 
+    <div class="col-md-3">
+      <div class="card" >
+      <img class="card-img-top" src="Images/book-2.png">
+      <div class="card-body">
+       <p class="card-text">Ensure necessary<br>
+          marking and signage<br>
+          is in place for guests. </p>
+    
+      </div>
+    </div></div> 
+    <div class="col-md-3"><div class="card" >
+      <img class="card-img-top" src="Images/book-1.png">
+      <div class="card-body">
+       <p class="card-text">Ensure guests will feel<br>
+          confident their vehicle<br>
+          will be safeguarded. </p>
+    
+      </div>
+    </div></div> 
+    <div class="col-md-3"><div class="card" >
+      <img class="card-img-top" src="Images/book-4.png">
+      <div class="card-body">
+        <p class="card-text">Keep a well-manicured<br>
+          space and be sure to<br>
+          make necessary<br>
+          repairs. </p>
+    
+      </div>
+    </div></div>  
+
+
+    <div class="col-md-3"><div class="card" >
+      <img class="card-img-top" src="Images/book-5.png">
+      <div class="card-body">
+      <p class="card-text">Offer items such as<br>
+          bottled waters,<br>
+          disposable coolers<br>
+          and ice.</p>
+    
+      </div>
+    </div></div>  
+
+    <div class="col-md-3"><div class="card" >
+      <img class="card-img-top" src="Images/book-6.png">
+      <div class="card-body">
+      <p class="card-text">Offer a discounted rate<br>
+          in exchange for longer<br>
+          booking periods.</p>
+    
+      </div>
+    </div></div>  
+
+    <div class="col-md-3"><div class="card" >
+      <img class="card-img-top" src="Images/book-7.png">
+      <div class="card-body">
+      <p class="card-text">Offer discounted weekly<br>
+          or seasonal bookings to<br>
+          lock in income.</p>
+    
+      </div>
+    </div></div>  
+
+    <div class="col-md-3"><div class="card" >
+      <img class="card-img-top" src="Images/book-8.png">
+      <div class="card-body">
+        <p class="card-text">Offer multi car<br>
+          discounts if space<br>
+          permits.</p>
+    
+      </div>
+    </div></div>  
+</div>
+  </div>
+
+ </section>
+
+<div class="img-overly">
+ <section id="bottom-foot" class="book_foot" style="background-image: url('Images/PaulGym07.png')">
+              <div class="container">
+              <h2><b>Start Hosting</b> </h2>
+             <button type="button" class="btn btn-primary btn-default">Get Started</button>
+              </div>
+ </section>
+</div>
+
+
+<!-- Start Footer -->
+<footer class="page-footer font-small unique-color-dark" id="main-foot">
+
+  <div class="container">
+
+<div class="container text-center text-md-left mt-5">
+
+  <div class="row mt-3">
+
+    <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4 foot-logo">
+      <p><img src="Images/logo-main.png"></p>
+
+    </div>
+<div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+
+      <h6 class="text-uppercase font-weight-bold">CONTACT US</h6>
+     
+      <p>
+        <a href="#!">BOOKING & PAYMENT</a>
+      </p>
+      <p>
+        <a href="#!">PRIVACY POLICY</a>
+      </p>
+      <p>
+        <a href="#!">TERMS & CONDITIONS</a>
+      </p>
+      <p>
+        <a href="#!">FAQs</a>
+      </p>
+
+    </div>
+
+<div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+<h6 class="text-uppercase font-weight-bold">PAYMENT METHOD</h6>
+      
+      <p><img src="Images/pay.png"></p>
+      
+    </div>
+
+
+
+    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+
+      <h6 class="text-uppercase font-weight-bold">REACH US</h6>
+     
+      <p>
+        <a href="mailto:info@Parkinggenie@ymail.com">info@Parkinggenie@ymail.com</a></p>
+      <!-- <p>
+        <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+      <p>
+        <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+      <p>
+        <i class="fas fa-print mr-3"></i> + 01 234 567 89</p> -->
+
+    </div>
+    <div class="btn_scroll">
+      <button id="scroll_top"><img src="Images/arrow_up.png"></button>
+    </div>
+
+  </div>
+
+
+</div>
+
+</div>
+</footer>
+<div class="footer-copyright text-center py-3">
+<div class="col-md-6">
+  2021 Parking Genie.  All Rights Reserved.
+</div>
+<div class="col-md-6">
+  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+  <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+</div>
+
+</div>
+<!-- End Footer -->
+</div>
+
+
+
+
+        </div>
+ 
+</body>
+</html>
